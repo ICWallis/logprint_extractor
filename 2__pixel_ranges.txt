@@ -1,8 +1,0 @@
-Page 0 (or PDF page 1)
-pixel_coords = {'x_start': 124.5, 'x_end': 373.0, 'y_start': 1199.0, 'y_end': 1223.5, 'zoom': 2.0}
-
-Page 195 (or PDF page 196)
-pixel_coords = {'x_start': 124.5, 'x_end': 373.0, 'y_start': 0.0, 'y_end': 854.0, 'zoom': 2.0}
-
-Standard page (all other pages)
-pixel_coords = {'x_start': 124.5, 'x_end': 373.0, 'y_start': 0.0, 'y_end': 1223.5, 'zoom': 2.0}
