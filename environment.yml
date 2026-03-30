@@ -1,4 +1,4 @@
-name: images-from-log-prints
+name: image-extractor
 channels:
   - conda-forge
   - defaults
