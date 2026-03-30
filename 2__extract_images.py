@@ -6,21 +6,33 @@ import os
 # INPUTS
 # ---------------------------------------------------------------------------
 
-pdf_file = r"c:\Users\irene\Dropbox (Personal)\Cubic-Earth\Marketing\ALT_colab\DigitisingLogPrints\Repo\University_Utah_FORGE_78B-32_FMI_Interpretation_20.pdf"
+#pdf_file = r"c:\Users\irene\Dropbox (Personal)\Cubic-Earth\Marketing\ALT_colab\DigitisingLogPrints\Repo\University_Utah_FORGE_78B-32_FMI_Interpretation_20.pdf"
+pdf_file = r"C:\Users\irene\Dropbox (Personal)\Cubic-Earth\Marketing\ALT_colab\DigitisingLogPrints\ExampleData\Ramsay_FMI_report_open_file__log_print.pdf"
 
 output_dir = r"c:\Users\irene\Dropbox (Personal)\Cubic-Earth\Marketing\ALT_colab\DigitisingLogPrints\Repo\extracted_images"
 
-wellname = "FORGE_78B-32"
+# wellname = "FORGE_78B-32"
 
-top_depth  = 2990.0   # depth at the very top of page 0 crop
-base_depth = 8507.0   # depth at the very bottom of the last page crop
+# top_depth  = 2990.0   # depth at the very top of page 0 crop
+# base_depth = 8507.0   # depth at the very bottom of the last page crop
 
 # Pixel coordinates from 2__define_pxl_ranges.py (PDF space, before zoom)
-pixel_coords_page_first             = {'x_start': 768.0, 'x_end': 987.0, 'y_start': 1199.5, 'y_end': 1223.5, 'zoom': 2.0}
-pixel_coords_all_other_pages    = {'x_start': 768.5, 'x_end': 987.0, 'y_start': 0.0, 'y_end': 1223.5, 'zoom': 2.0}
-pixel_coords_page_last           = {'x_start': 768.0, 'x_end': 987.5, 'y_start': 0.0, 'y_end': 855.0, 'zoom': 2.0}
+# pixel_coords_first_page             = {'x_start': 768.0, 'x_end': 987.0, 'y_start': 1199.5, 'y_end': 1223.5, 'zoom': 2.0}
+# pixel_coords_all_other_pages    = {'x_start': 768.5, 'x_end': 987.0, 'y_start': 0.0, 'y_end': 1223.5, 'zoom': 2.0}
+# pixel_coords_last_page           = {'x_start': 768.0, 'x_end': 987.5, 'y_start': 0.0, 'y_end': 855.0, 'zoom': 2.0}
 
-exclude_pages = [196]   # 0-indexed page numbers to skip entirely
+# exclude_pages = [196]   # 0-indexed page numbers to skip entirely
+
+wellname = "RAMSAY-1"
+
+top_depth  = 223.4  # depth at the very top of page 0 crop
+base_depth = 999.5  # depth at the very bottom of the last page crop
+
+pixel_coords_first_page = {'x_start': 423.0, 'x_end': 541.0, 'y_start': 178.0, 'y_end': 594.5, 'zoom': 2.0}
+pixel_coords_all_other_pages = {'x_start': 423.0, 'x_end': 541.0, 'y_start': 0.0, 'y_end': 594.5, 'zoom': 2.0}
+pixel_coords_last_page = {'x_start': 423.0, 'x_end': 541.0, 'y_start': 0.0, 'y_end': 594.5, 'zoom': 2.0}
+
+exclude_pages = [259]   # 0-indexed page numbers to skip entirely
 
 # Zoom used when rendering the final PNG (independent of the selection zoom)
 RENDER_ZOOM = 2.0
@@ -32,9 +44,9 @@ RENDER_ZOOM = 2.0
 def get_coords(page_num, first_page, last_page):
     """Return the pixel_coords dict for a given 0-indexed page number."""
     if page_num == first_page:
-        return pixel_coords_page_first
+        return pixel_coords_first_page
     elif page_num == last_page:
-        return pixel_coords_page_last
+        return pixel_coords_last_page
     else:
         return pixel_coords_all_other_pages
 

@@ -204,11 +204,11 @@ def preview_crop(pdf_path, page_num, x_start, x_end, y_start, y_end, zoom=2.0):
     print(f"Cropped image size: {pix.width} x {pix.height} pixels")
 
 
-pdf_file = r"c:\Users\irene\Dropbox (Personal)\Cubic-Earth\Marketing\ALT_colab\DigitisingLogPrints\Repo\University_Utah_FORGE_78B-32_FMI_Interpretation_20.pdf"
+pdf_file = r"C:\Users\irene\Dropbox (Personal)\Cubic-Earth\Marketing\ALT_colab\DigitisingLogPrints\ExampleData\Ramsay_FMI_report_open_file__log_print.pdf"
 
 
 # Interactive selection
-page_number = 100  # Make separate selections for the first and last page, and for the rest of the pages (if they differ)
+page_number = 258  # python numbers from zero
 crop_coords = interactive_crop_selector(pdf_file, page_number)
 
 
