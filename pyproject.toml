@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "logprint_extractor"
-version = "0.1.0"
+version = "0.1.1"
 description = "Extract depth-labelled borehole images from PDF well log prints."
 readme = "README.md"
 license = "Apache-2.0" 
@@ -27,6 +27,7 @@ dependencies = [
 ]
 
 [project.urls]
+Homepage = "https://cubicearth.nz"
 Repository = "https://github.com/ICWallis/logprint_extractor"
 
 [tool.setuptools.packages.find]
