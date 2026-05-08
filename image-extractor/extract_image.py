@@ -33,9 +33,9 @@ def extract_image(
     wellname:
         Well identifier used as the filename prefix, e.g. ``"FORGE_78B-32"``.
     top_depth:
-        Depth value (any unit) at the very top of the first included page crop.
+        Depth value (any unit, ft/m) at the very top of the log (first included page).
     base_depth:
-        Depth value at the very bottom of the last included page crop.
+        Depth value (any unit, ft/m) at the very bottom of the log (last included page).
     pixel_coords_first:
         Crop coordinates for the first included page — dict with keys
         ``x_start``, ``x_end``, ``y_start``, ``y_end``, ``zoom``.
