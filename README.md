@@ -11,7 +11,7 @@ Contact irene@cubicearth.nz for more information on extracting and using histori
 ## Installation
 
 ```bash
-pip install -e .
+pip install logprint_extractor
 ```
 
 Requires Python ≥ 3.11.  Dependencies (`pymupdf`, `Pillow`, `matplotlib`) are installed automatically.

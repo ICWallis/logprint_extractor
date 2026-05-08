@@ -3,11 +3,11 @@ requires = ["setuptools>=61", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "image_extractor"
+name = "logprint_extractor"
 version = "0.1.0"
 description = "Extract depth-labelled borehole images from PDF well log prints."
 readme = "README.md"
-license = { text = "Apache-2.0" }
+license = "Apache-2.0" 
 requires-python = ">=3.11"
 authors = [
     { name = "Irene Wallis", email = "irene@cubicearth.nz" }
@@ -15,8 +15,9 @@ authors = [
 keywords = ["borehole", "borehole image", "well log", "PDF", "image extraction", "WellCAD"]
 classifiers = [
     "Programming Language :: Python :: 3",
-    "License :: OSI Approved :: Apache Software License",
-    "Topic :: Scientific/Engineering :: Geoscience",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Scientific/Engineering :: Hydrology",
+    "Topic :: Scientific/Engineering :: Image Processing",
     "Intended Audience :: Science/Research",
 ]
 dependencies = [
@@ -26,8 +27,8 @@ dependencies = [
 ]
 
 [project.urls]
-Repository = "https://github.com/ICWallis/image_extractor"
+Repository = "https://github.com/ICWallis/logprint_extractor"
 
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["image_extractor*"]
+include = ["logprint_extractor*"]
